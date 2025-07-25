@@ -1,43 +1,41 @@
-💳 Smart Credit Risk Advisor
-An ML & LLM-powered Financial Assistant for Personalized Credit Risk Insights
+# 💳 Smart Credit Risk Advisor
 
-📌 Overview
-This project is a multi-phase AI-powered system designed to simulate, predict, and advise users on credit risk and financial behavior. The application integrates deep learning, Markov modeling, and natural language interfaces to deliver intelligent insights based on user, card, and transaction data.
+🧠 A high-level ML + LLM-powered engine for analyzing, forecasting, and advising on credit risk using user transactions, card behavior, and demographics.
 
-Key Highlights:
+## 🚀 What It Does
 
-Engineered features from raw user, card, and transaction datasets.
+- Cleans and prepares real-world banking datasets (`users`, `cards`, `transactions`)
+- Engineers behavioral features like:
+  - Online transaction ratio
+  - Refund frequency
+  - Monthly average spend
+  - Credit utilization trends
+- Models **credit score transitions using Markov Chains**
+- Forecasts user repayment behavior via **LSTM time series**
+- Provides:
+  - 🤖 A **Streamlit chatbot assistant** powered by Mistral + Ollama
+  - 📉 A **Markov simulation engine** for future credit state predictions
+  - 📊 Interactive plots and KPI visualizations
 
-Built a Markov model for credit score state transitions.
+## 🧠 Core Tech Stack
 
-Developed LSTM models for spend and payment forecasting.
+- Python (Pandas, NumPy, Scikit-Learn)
+- LSTM (TensorFlow/Keras)
+- Markov Chains (custom transition matrix modeling)
+- Streamlit (chatbot + visual insights)
+- Ollama + Mistral 7B (LLM integration)
+- Plotly / Matplotlib (data visualization)
 
-Simulated credit trajectories using probabilistic modeling.
+## 📁 File Structure
 
-Deployed an LLM-driven chatbot with Streamlit UI to answer financial and behavioral queries.
-
-Leveraged Mistral (via Ollama) for local LLM-based assistance.
-
-🧠 Tech Stack
-Python (Pandas, NumPy, Scikit-Learn, TensorFlow/Keras)
-
-Streamlit for UI
-
-Ollama with Mistral 7B for natural language interaction
-
-Matplotlib, Plotly for visualizations
-
-📂 Folder Structure
-
-Credit-Risk-Advisor/
-│
-├── Phase1_Data_Preparation.py        
-├── Phase2_Feature_Engineering.py   
-├── Phase3_Markov_Model.py            
-├── Phase4_LSTM_Forecasting.py        
-├── Phase5_Markov_Simulation.py       
-├── Phase6_Credit_Assistant_Chatbot.py
-├── Phase7_Visualization.py          
+```bash
+├── Phase1_Data_Preparation.py         # Cleans and merges users, cards, and transactions
+├── Phase2_Feature_Engineering.py      # Extracts credit behavior KPIs
+├── Phase3_Markov_Model.py             # Constructs credit state transitions
+├── Phase4_LSTM_Forecasting.py         # Predicts monthly spend via LSTM
+├── Phase5_Markov_Simulation.py        # Simulates credit behavior using Markov paths
+├── Phase6_Credit_Assistant_Chatbot.py # Streamlit chatbot assistant (LLM-based)
+├── Phase7_Visualization.py            # Trend plots and user-level dashboards
 │
 ├── users_data.csv
 ├── cards_data.csv
@@ -45,4 +43,6 @@ Credit-Risk-Advisor/
 ├── mcc_codes.json
 ├── train_fraud_labels.json
 │
-└── outputs/                          
+├── outputs/                           # Folder for saving plots, results, simulations
+├── requirements.txt
+├── README.md
